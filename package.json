@@ -1,0 +1,198 @@
+{
+  "name": "clipboard-list",
+  "displayName": "Clipboard List",
+  "description": "Retains the last 10 copied texts and allows quick pasting using commands and key numbers.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andres-castro-engr/clipboard-list.git"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "clipboard-list.pasteFromHistory",
+        "title": "Show History & Paste",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.pasteByNumber",
+        "title": "Paste by Number...",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.clearHistory",
+        "title": "Clear History",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste1",
+        "title": "Paste Item 1",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste2",
+        "title": "Paste Item 2",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste3",
+        "title": "Paste Item 3",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste4",
+        "title": "Paste Item 4",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste5",
+        "title": "Paste Item 5",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste6",
+        "title": "Paste Item 6",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste7",
+        "title": "Paste Item 7",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste8",
+        "title": "Paste Item 8",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste9",
+        "title": "Paste Item 9",
+        "category": "Clipboard"
+      },
+      {
+        "command": "clipboard-list.paste10",
+        "title": "Paste Item 10",
+        "category": "Clipboard"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "clipboard-list.pasteFromHistory",
+        "key": "win+alt+v",
+        "mac": "cmd+alt+v",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste1",
+        "key": "ctrl+alt+v 1",
+        "mac": "cmd+alt+v 1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste2",
+        "key": "ctrl+alt+v 2",
+        "mac": "cmd+alt+v 2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste3",
+        "key": "ctrl+alt+v 3",
+        "mac": "cmd+alt+v 3",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste4",
+        "key": "ctrl+alt+v 4",
+        "mac": "cmd+alt+v 4",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste5",
+        "key": "ctrl+alt+v 5",
+        "mac": "cmd+alt+v 5",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste6",
+        "key": "ctrl+alt+v 6",
+        "mac": "cmd+alt+v 6",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste7",
+        "key": "ctrl+alt+v 7",
+        "mac": "cmd+alt+v 7",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste8",
+        "key": "ctrl+alt+v 8",
+        "mac": "cmd+alt+v 8",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste9",
+        "key": "ctrl+alt+v 9",
+        "mac": "cmd+alt+v 9",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "clipboard-list.paste10",
+        "key": "ctrl+alt+v 0",
+        "mac": "cmd+alt+v 0",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Clipboard List",
+      "properties": {
+        "clipboardList.maxItems": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 50,
+          "description": "Maximum number of clipboard history items to keep."
+        },
+        "clipboardList.pollIntervalMs": {
+          "type": "integer",
+          "default": 800,
+          "minimum": 200,
+          "maximum": 5000,
+          "description": "Clipboard polling interval in milliseconds."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.138.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
