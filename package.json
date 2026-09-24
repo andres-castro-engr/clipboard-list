@@ -3,7 +3,7 @@
   "displayName": "Clipboard List",
   "publisher": "andres-castro-engr",
   "description": "Retains the last 10 copied texts and allows quick pasting using commands and key numbers.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.138.0"
